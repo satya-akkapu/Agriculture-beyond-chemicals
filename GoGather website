@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoGather - Organic Waste Management</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .navbar h1 {
+            font-size: 24px;
+            font-family: 'Arial', sans-serif;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            gap: 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        h2 {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .banner {
+            background: url('your-banner-image-path-here') no-repeat center center/cover;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .banner h2 {
+            color: white;
+            font-size: 36px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        /* About Section */
+        .about-section {
+            padding: 50px;
+            background-color: #f4f4f4;
+        }
+
+        .about-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .about-content img {
+            max-width: 300px;
+            margin-right: 20px;
+        }
+
+        .about-content p {
+            font-size: 18px;
+            max-width: 600px;
+        }
+
+        /* Waste Types Section */
+        .waste-types {
+            padding: 50px;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .waste-items {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .waste-item {
+            margin: 20px;
+            text-align: center;
+            max-width: 250px;
+        }
+
+        .waste-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .waste-item h3 {
+            margin-top: 10px;
+            font-size: 20px;
+        }
+
+        .waste-item p {
+            margin-top: 5px;
+            color: #ff5722;
+            font-size: 18px;
+        }
+
+        /* Organic Amendments Section */
+        .organic-amendments {
+            padding: 20px;
+            background-color: #fff;
+        }
+
+        .amendments-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .amendment {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .amendment img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .amendment h3 {
+            margin-top: 10px;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 20px;
+            background-color: #e9e9e9;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .service {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .service img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .service h3 {
+            margin-top: 10px;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 20px;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .contact form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .contact input, .contact textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 300px;
+            margin: 0 auto;
+        }
+
+        .contact button {
+            padding: 10px;
+            border: none;
+            background-color: #333;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .contact-info {
+            margin-top: 20px;
+        }
+
+        .contact-info p {
+            margin: 5px 0;
+        }
+
+        .contact-info a {
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer {
+            background-color: #1e1e1e;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="navbar">
+            <h1>GoGather</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Waste Types</a></li>
+                    <li><a href="#">Organic Amendments</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Testimonials</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Banner Section -->
+    <section id="home" class="banner">
+        <h2>LET NATURE NURTURE..., GO ORGANIC!!!</h2>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <h2>About Us</h2>
+        <div class="about-content">
+            <img src="wastebags.jpg" alt="Organic Waste Bags">
+            <p>We provide a seamless platform for users to manage their organic waste responsibly. Simply select your type of waste and enter its weight - we'll take care of the rest to ensure it is properly processed. Our mission is to provide organic manure to fields at a friendly cost!</p>
+        </div>
+    </section>
+
+    <!-- Waste Types Section -->
+    <section id="waste-types" class="waste-types">
+        <h2>Waste Types</h2>
+        <div class="waste-items">
+            <div class="waste-item">
+                <img src="animalwaste.jpg" alt="Animal Remains">
+                <h3>Animal Remains</h3>
+                <p>Rs.200/- per kg</p>
+            </div>
+            <div class="waste-item">
+                <img src="plantwaste.jpg" alt="Plant Waste">
+                <h3>Plant Waste</h3>
+                <p>Rs.100/- per kg</p>
+            </div>
+            <div class="waste-item">
+                <img src="cotton.jpg" alt="Cotton and Garments">
+                <h3>Cotton and Garments</h3>
+                <p>Rs.120/- per kg</p>
+            </div>
+            <div class="waste-item">
+                <img src="foodremains.jpg" alt="Food Remains">
+                <h3>Food Remains</h3>
+                <p>Rs.80/- per kg</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Organic Amendments Section -->
+    <section class="organic-amendments">
+        <h2>ORGANIC AMENDMENTS</h2>
+        <div class="amendments-grid">
+            <div class="amendment">
+                <img src="biochar.jpg" alt="Biochar">
+                <h3>Biochar</h3>
+                <p>Rs. 560/-kg</p>
+                <p>Carbon (C), Nitrogen (N), Phosphorus (P), Potassium (K), Calcium (Ca), Magnesium (Mg), Sulphur (S), Micronutrients</p>
+            </div>
+            <div class="amendment">
+                <img src="greenmanure.jpg" alt="Green Manure">
+                <h3>Green Manure</h3>
+                <p>Rs. 499/-kg</p>
+                <p>Legume-based green manure uses legumes like clover or beans to fix nitrogen. Non-legume-based green manure uses crops like</p>
+            </div>
+            <div class="amendment">
+                <img src="peatmoss.jpg" alt="Peat Moss">
+                <h3>Peat Moss</h3>
+                <p>Rs. 599/-kg</p>
+                <p>Derived from partially decayed plant matter. Improves soil structure, increases water retention, and acidifies soil.</p>
+            </div>
+            <div class="amendment">
+                <img src="silage.jpg" alt="Silage">
+                <h3>Silage</h3>
+                <p>Rs. 460/-kg</p>
+                <p>Fermented plant material, often from grasses or legumes. Rich in nutrients and beneficial microorganisms.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <h2>SERVICES</h2>
+        <div class="services-grid">
+            <div class="service">
+                <img src="dropoffservice.jpeg" alt="Drop-Off Services">
+                <h3>Drop-Off Services</h3>
+                <p>Provision of drop-off locations for residents to deposit their organic waste.</p>
+            </div>
+            <div class="service">
+                <img src="curbside.jpg" alt="Curbside Collection">
+                <h3>Curbside Collection</h3>
+                <p>Regular, reliable curbside collection of organic waste, including food scraps and yard waste, on a scheduled service day.</p>
+            </div>
+            <div class="service">
+                <img src="pwf.jpg" alt="Partnerships with Local Farms and Gardens">
+                <h3>Partnerships with Local Farms and Gardens</h3>
+                <p>Collaboration with local farms and gardens to support urban agriculture and provide access to healthy, equitable food.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <h2>Contact Us</h2>
+        <form method="post" action="https://script.google.com/macros/s/AKfycbw-A3GT8zH_MVvFvNkjGJbgQUP52ubH_aNy9uggd2U_pXPfanH1DlXrXZyxFUqQqt2I/exec" >
+            <input type="text" name="name" placeholder="Name">
+            <input type="text" name="phone" placeholder="Phone">
+            <input type="email" name="email" placeholder="Email Address">
+            <textarea name="message" placeholder="Message"></textarea>
+            <button type="submit">Contact Us</button>
+        </form>
+        <div class="contact-info">
+            <p>Chintalavalasa, Andhra Pradesh, India</p>
+            <p><a href="tel:+919997777000">+91-999-7777-000</a></p>
+            <p><a href="mailto:gogather42@gmail.com">gogather42@gmail.com</a></p>
+            <p>Mon-Sat: 08:00-20:00</p>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 GoGather. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
+
